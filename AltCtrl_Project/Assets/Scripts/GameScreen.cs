@@ -22,6 +22,8 @@ public class GameScreen : MonoBehaviour
         kidneyStone.SetActive(false);
         cutOpen.SetActive(false);
         weldOrgans.SetActive(false);
+
+        GameManager.instance.SetMinigameComplete("EyeReplacement");
     }
 
     public void BandagesButton()
@@ -34,6 +36,8 @@ public class GameScreen : MonoBehaviour
         kidneyStone.SetActive(false);
         cutOpen.SetActive(false);
         weldOrgans.SetActive(false);
+
+        GameManager.instance.SetMinigameComplete("Bandages");
     }
 
     public void StitchUpButton()
@@ -46,6 +50,8 @@ public class GameScreen : MonoBehaviour
         kidneyStone.SetActive(false);
         cutOpen.SetActive(false);
         weldOrgans.SetActive(false);
+
+        GameManager.instance.SetMinigameComplete("StitchUp");
     }
 
     public void ArteryBypassButton()
@@ -58,6 +64,8 @@ public class GameScreen : MonoBehaviour
         kidneyStone.SetActive(false);
         cutOpen.SetActive(false);
         weldOrgans.SetActive(false);
+
+        GameManager.instance.SetMinigameComplete("ArteryBypass");
     }
 
     public void HeartListenButton()
@@ -70,6 +78,8 @@ public class GameScreen : MonoBehaviour
         kidneyStone.SetActive(false);
         cutOpen.SetActive(false);
         weldOrgans.SetActive(false);
+
+        GameManager.instance.SetMinigameComplete("HeartListening");
     }
 
     public void KidneyStoneButton()
@@ -82,6 +92,8 @@ public class GameScreen : MonoBehaviour
         kidneyStone.SetActive(true);
         cutOpen.SetActive(false);
         weldOrgans.SetActive(false);
+
+        GameManager.instance.SetMinigameComplete("KidneyStoneRemoval");
     }
 
     public void CutOpenButton()
@@ -94,6 +106,8 @@ public class GameScreen : MonoBehaviour
         kidneyStone.SetActive(false);
         cutOpen.SetActive(true);
         weldOrgans.SetActive(false);
+
+        GameManager.instance.SetMinigameComplete("CuttingOpen");
     }
 
     public void WeldOrgansButton()
@@ -106,5 +120,7 @@ public class GameScreen : MonoBehaviour
         kidneyStone.SetActive(false);
         cutOpen.SetActive(false);
         weldOrgans.SetActive(true);
+
+        GameManager.instance.SetMinigameComplete("WeldingOrgans");
     }
 }
