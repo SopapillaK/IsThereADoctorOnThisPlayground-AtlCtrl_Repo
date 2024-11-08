@@ -16,10 +16,16 @@ using System.Collections;
  */
 public class SampleMessageListener : MonoBehaviour
 {
+    public GameObject circle1;
     // Invoked when a line of data is received from the serial device.
     void OnMessageArrived(string msg)
     {
         Debug.Log("Message arrived: " + msg);
+        if (msg == "Sensor_Covered")
+        {
+            circle1.SetActive(false);
+            GameManager.instance.SetMinigameComplete("EyeReplacement");
+        }
     }
 
     // Invoked when a connect/disconnect event occurs. The parameter 'success'

@@ -23,7 +23,7 @@ public class GameScreen : MonoBehaviour
         cutOpen.SetActive(false);
         weldOrgans.SetActive(false);
 
-        GameManager.instance.SetMinigameComplete("EyeReplacement");
+        //GameManager.instance.SetMinigameComplete("EyeReplacement");
     }
 
     public void BandagesButton()
