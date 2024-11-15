@@ -16,15 +16,56 @@ using System.Collections;
  */
 public class SampleMessageListener : MonoBehaviour
 {
-    public GameObject circle1;
+    public GameObject EyeCircle;
+    public GameObject CutOpenCircle;
+    public GameObject StitchUpCircle;
+    public GameObject HeartListenCircle;
+    public GameObject KidneyStoneCircle;
+    public GameObject WeldOrgansCircle;
+    public GameObject BandagesCircle;
     // Invoked when a line of data is received from the serial device.
     void OnMessageArrived(string msg)
     {
         Debug.Log("Message arrived: " + msg);
         if (msg == "Sensor_Covered")
         {
-            circle1.SetActive(false);
+            EyeCircle.SetActive(false);
             GameManager.instance.SetMinigameComplete("EyeReplacement");
+        }
+        if (msg == "Sensor_Covered2")
+        {
+            KidneyStoneCircle.SetActive(false);
+            GameManager.instance.SetMinigameComplete("KidneyStoneRemoval");
+        }
+        if (msg == "Sensor_Covered3")
+        {
+            WeldOrgansCircle.SetActive(false);
+            GameManager.instance.SetMinigameComplete("WeldingOrgans");
+        }
+        if (msg == "Light_Uncovered")
+        {
+            CutOpenCircle.SetActive(false);
+            GameManager.instance.SetMinigameComplete("CuttingOpen");
+        }
+        if (msg == "Light_Uncovered2")
+        {
+            StitchUpCircle.SetActive(false);
+            GameManager.instance.SetMinigameComplete("StitchUp");
+        }
+        if (msg == "Light_Uncovered3")
+        {
+            HeartListenCircle.SetActive(false);
+            GameManager.instance.SetMinigameComplete("HeartListening");
+        }
+        if (msg == "Light_Uncovered4")
+        {
+            BandagesCircle.SetActive(false);
+            GameManager.instance.SetMinigameComplete("Bandages");
+        }
+        if (msg == "Light_Uncovered5")
+        {
+            BandagesCircle.SetActive(false);
+            GameManager.instance.SetMinigameComplete("Bandages");
         }
     }
 

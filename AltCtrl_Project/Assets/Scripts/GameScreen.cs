@@ -51,7 +51,7 @@ public class GameScreen : MonoBehaviour
         cutOpen.SetActive(false);
         weldOrgans.SetActive(false);
 
-        GameManager.instance.SetMinigameComplete("StitchUp");
+        //GameManager.instance.SetMinigameComplete("StitchUp");
     }
 
     public void ArteryBypassButton()
@@ -79,7 +79,7 @@ public class GameScreen : MonoBehaviour
         cutOpen.SetActive(false);
         weldOrgans.SetActive(false);
 
-        GameManager.instance.SetMinigameComplete("HeartListening");
+        //GameManager.instance.SetMinigameComplete("HeartListening");
     }
 
     public void KidneyStoneButton()
@@ -93,7 +93,7 @@ public class GameScreen : MonoBehaviour
         cutOpen.SetActive(false);
         weldOrgans.SetActive(false);
 
-        GameManager.instance.SetMinigameComplete("KidneyStoneRemoval");
+        //GameManager.instance.SetMinigameComplete("KidneyStoneRemoval");
     }
 
     public void CutOpenButton()
@@ -107,7 +107,7 @@ public class GameScreen : MonoBehaviour
         cutOpen.SetActive(true);
         weldOrgans.SetActive(false);
 
-        GameManager.instance.SetMinigameComplete("CuttingOpen");
+        //GameManager.instance.SetMinigameComplete("CuttingOpen");
     }
 
     public void WeldOrgansButton()
@@ -121,6 +121,6 @@ public class GameScreen : MonoBehaviour
         cutOpen.SetActive(false);
         weldOrgans.SetActive(true);
 
-        GameManager.instance.SetMinigameComplete("WeldingOrgans");
+        //GameManager.instance.SetMinigameComplete("WeldingOrgans");
     }
 }

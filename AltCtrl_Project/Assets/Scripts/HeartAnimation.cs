@@ -5,37 +5,27 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 
 public class HeartAnimation : MonoBehaviour
 {
-
     public GameObject HeartNormal;
     public GameObject HeartBig;
 
+    public float interval = 1.0f; // Time in seconds to alternate
 
-    private int counter = 0;
-    private float switchTime = 0.3f; // Time between switches
+    private bool isObjectAActive = true;
 
-
-
-    void Update()
-
+    void Start()
     {
-        counter++;
-        if (Time.time > switchTime)
-        {
-            if (counter % 2 == 0)
-            {
-                HeartNormal.SetActive(true);
-                HeartBig.SetActive(false);
-            }
-            else
-            {
-                HeartNormal.SetActive(false);
-                HeartBig.SetActive(true);
-            }
+        // Start with objectA active and objectB inactive
+        HeartNormal.SetActive(true);
+        HeartBig.SetActive(false);
+        InvokeRepeating("ToggleObjects", interval, interval);
+    }
 
-            counter = 0;
-            switchTime = Time.time + 1f; // Reset switch time
-
-        }
+    void ToggleObjects()
+    {
+        isObjectAActive = !isObjectAActive;
+        HeartNormal.SetActive(isObjectAActive);
+        HeartBig.SetActive(!isObjectAActive);
     }
 }
+
 
