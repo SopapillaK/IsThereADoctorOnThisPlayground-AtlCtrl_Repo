@@ -14,9 +14,9 @@ public class GameManager : MonoBehaviour
     public ReprintList reprintList;
     public bool GameEnding;
 
-    public enum miniGameCheck
+    public enum miniGameCheck //Add back ArteryBypass when ready
     {
-        EyeReplacement, Bandages, StitchUp, ArteryBypass, HeartListening, KidneyStoneRemoval, CuttingOpen, WeldingOrgans
+        EyeReplacement, Bandages, StitchUp, HeartListening, KidneyStoneRemoval, CuttingOpen, WeldingOrgans
     }
 
     void Awake()

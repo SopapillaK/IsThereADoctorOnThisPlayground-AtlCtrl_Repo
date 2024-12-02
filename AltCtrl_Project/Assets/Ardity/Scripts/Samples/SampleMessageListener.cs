@@ -42,17 +42,22 @@ public class SampleMessageListener : MonoBehaviour
             WeldOrgansCircle.SetActive(false);
             GameManager.instance.SetMinigameComplete("WeldingOrgans");
         }
+        if (msg == "Sensor_Covered4")
+        {
+            BandagesCircle.SetActive(false);
+            GameManager.instance.SetMinigameComplete("Bandages");
+        }
         if (msg == "Light_Uncovered")
         {
             CutOpenCircle.SetActive(false);
             GameManager.instance.SetMinigameComplete("CuttingOpen");
         }
-        if (msg == "Light_Uncovered2")
+        if (msg == "Light_Covered2")
         {
             StitchUpCircle.SetActive(false);
             GameManager.instance.SetMinigameComplete("StitchUp");
         }
-        if (msg == "Light_Uncovered3")
+        if (msg == "Light_Covered3")
         {
             HeartListenCircle.SetActive(false);
             GameManager.instance.SetMinigameComplete("HeartListening");
