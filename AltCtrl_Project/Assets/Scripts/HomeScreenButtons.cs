@@ -10,7 +10,7 @@ public class HomeScreenButtons : MonoBehaviour
 
     public void StartButton()
     {
-        SceneManager.LoadScene("How2Screen");
+        SceneManager.LoadScene("GameScreen");
     }
 
     public void CreditsButton()
